@@ -156,13 +156,14 @@ class Stats():
 
 
 class Player():
-    def __init__ (self, number, name, position, age, height, weight):
+    def __init__ (self, number, name, position, age, height, weight, college):
         self.number = number
         self.name = name
         self.position = position
         self.age = age
         self.height = height
         self.weight = weight
+        self.college = college
 
     def __str__ (self):
         return f"Player(number={self.number}, name={self.name})"
