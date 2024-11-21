@@ -51,7 +51,16 @@
 
 
 class Stats():
-
+    """     
+    stats class 
+    - points: int 
+    - catches: int 
+    - touchdowns: int 
+    - fumbles: int 
+    - interceptions : int 
+    - sacks : int 
+       
+    """
     def __init__(self,points, catches, touchdowns, fumbles, interceptions, sacks):
         self.points = points
         self.catches = catches
