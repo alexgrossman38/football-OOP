@@ -62,6 +62,14 @@ class Stats():
        
     """
     def __init__(self,points, catches, touchdowns, fumbles, interceptions, sacks):
+        """
+        Args:
+            points (int): _description_
+            catches (int): _description_
+            touchdowns (int): _description_
+            interceptions (int): _description_
+            sacks (int): _description_
+        """
         self.points = points
         self.catches = catches
         self.touchdowns = touchdowns
@@ -84,7 +92,8 @@ class Stats():
         """
         return self.points
 
-    def set_catches(self, catches):
+    def set_catches(self, catches): 
+        
         """
         sets catches
         """
