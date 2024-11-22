@@ -51,25 +51,8 @@
 
 
 class Stats():
-    """     
-    stats class 
-    - points: int 
-    - catches: int 
-    - touchdowns: int 
-    - fumbles: int 
-    - interceptions : int 
-    - sacks : int 
-       
-    """
+
     def __init__(self,points, catches, touchdowns, fumbles, interceptions, sacks):
-        """
-        Args:
-            points (int): _description_
-            catches (int): _description_
-            touchdowns (int): _description_
-            interceptions (int): _description_
-            sacks (int): _description_
-        """
         self.points = points
         self.catches = catches
         self.touchdowns = touchdowns
@@ -92,8 +75,7 @@ class Stats():
         """
         return self.points
 
-    def set_catches(self, catches): 
-        
+    def set_catches(self, catches):
         """
         sets catches
         """
@@ -156,14 +138,13 @@ class Stats():
 
 
 class Player():
-    def __init__ (self, number, name, position, age, height, weight, college):
+    def __init__ (self, number, name, position, age, height, weight):
         self.number = number
         self.name = name
         self.position = position
         self.age = age
         self.height = height
         self.weight = weight
-        self.college = college
 
     def __str__ (self):
         return f"Player(number={self.number}, name={self.name})"
@@ -279,6 +260,68 @@ class Coach():
         """
         return self.age
 
+
+class Team():
+
+    def __init__ (self, name, players, coaches, stats):
+        self.name = name
+        self.players = players
+        self.coaches = coaches
+        self.stats = stats
+
+    def __str__ (self):
+
+        return f"Team(name={self.name})"
+
+    def set_name(self, name):
+        """
+        sets the name of the team
+        """
+        self.name = name
+
+    def get_name(self):
+        """
+        gets the name of the team
+        """
+        return self.name
+
+    def set_players(self, players):
+        """
+        sets the players of the team
+        """
+        self.players = players
+
+    def get_players(self):
+        """
+        gets the players of the team
+        """
+        return self.players
+
+    def set_coaches(self, coaches):
+        """
+        sets the coaches of the team
+        """
+        self.coaches = coaches
+
+    def get_coaches(self):
+        """
+        gets the coaches of the team
+        """
+        return self.coaches
+
+    def set_stats(self, stats):
+        """
+        sets the stats of the team
+        """
+        self.stats = stats
+
+    def get_stats(self):
+        """
+        gets the stats of the team
+        """
+        return self.stats
+
+
 coach1 = Coach("Head Coach", "Dino", 40)
 coach2 = Coach("Assistant Coach", "Sean", 35)
 
@@ -287,9 +330,8 @@ print(coach2)
 
 
 
-player1 = Player(10, "Manning", "quaterback", 34, 76, 210, "Ole Miss")
-player2 = Player(88, "Nicks", "receiver", 32, 77, 190, "North Carolina")
-
+player1 = Player(10, "Manning", "quaterback", 34, 76, 210,)
+player2 = Player(88, "Nicks", "receiver", 32, 77, 190)
 
 
 # add stats
@@ -299,4 +341,15 @@ print(stats1)
 
 print(player1)
 print(player2)
+
+
+# instantiate team
+# team HAS players
+# team has coaches
+# team has tats
+team1 = Team("Giants", [player1, player2], [coach1, coach2], stats1)
+
+# what kind of functionality would be useful to have for team
+
+print(team1)
 
