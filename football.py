@@ -287,8 +287,9 @@ print(coach2)
 
 
 
-player1 = Player(10, "Manning", "quaterback", 34, 76, 210,)
-player2 = Player(88, "Nicks", "receiver", 32, 77, 190)
+player1 = Player(10, "Manning", "quaterback", 34, 76, 210, "Ole Miss")
+player2 = Player(88, "Nicks", "receiver", 32, 77, 190, "North Carolina")
+
 
 
 # add stats
